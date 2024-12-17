@@ -21,18 +21,19 @@ public class Fabricante {
 		int maxRepeticiones = 0;
 		
 		for (int i = 0;i < fabricantes.size();i++) {
-			String elemento = fabricantes.get(i).getNombre();
+			Fabricante fabricante = fabricantes.get(i);
+			String nombreFabricante = fabricante.getNombre();
 			int contador = 0;
 			
-			for (int r = 0;i < fabricantes.size();i++) {
-				if(fabricantes.get(r).getNombre() == elemento) {
+			for (int r = 0;r < fabricantes.size();r++) {
+				if(fabricantes.get(r).getNombre() == nombreFabricante) {
 					contador++;
 				}
 			}
 			
 			if (contador > maxRepeticiones) {
 				maxRepeticiones = contador;
-				fabricanteMasVendedor = fabricantes.get(i);
+				fabricanteMasVendedor = fabricante;
 			}
 			
 		}

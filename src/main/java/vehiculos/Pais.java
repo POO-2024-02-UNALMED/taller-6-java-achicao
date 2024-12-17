@@ -27,18 +27,19 @@ public class Pais {
 		int maxRepeticiones = 0;
 		
 		for (int i = 0;i < paises.size();i++) {
-			String elemento = paises.get(i).getNombre();
+			Pais pais = paises.get(i);
+			String nombrePais = pais.getNombre();
 			int contador = 0;
 			
-			for (int r = 0;i < paises.size();i++) {
-				if(paises.get(r).getNombre() == elemento) {
+			for (int r = 0;r < paises.size();r++) {
+				if(paises.get(r).getNombre() == nombrePais) {
 					contador++;
 				}
 			}
 			
 			if (contador > maxRepeticiones) {
 				maxRepeticiones = contador;
-				paisMasVendedor = paises.get(i);
+				paisMasVendedor = pais;
 			}
 			
 		}
