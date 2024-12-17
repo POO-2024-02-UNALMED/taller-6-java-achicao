@@ -24,7 +24,7 @@ public class Vehiculo {
 		this.traccion = traccion;
 		this.fabricante = fabricante;
 		Vehiculo.cantidadVehiculos += 1;
-	}
+		}
 	
 	public String vehiculosPorTipo() {
 		return "Automoviles: "+Automovil.getCantidad()+"\nCamionetas"+Camioneta.getCantidad()+"\nCamiones: "+Camion.getCantidad();
